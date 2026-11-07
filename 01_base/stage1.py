@@ -15,7 +15,9 @@ client = OpenAI(
     base_url=os.getenv("LLM_BASE_URL"),   # where the requests go
     api_key=os.getenv("LLM_API_KEY"),     # the account that is charged
 )
-
+print("base_url", os.getenv("LLM_BASE_URL"))
+print("api_key", os.getenv("LLM_API_KEY"))
+print("model", os.getenv("LLM_MODEL"))
 # 2. Build the list. The model receives only what is in this list.
 messages = [
     {"role": "user", "content": "Suggest one name for a small café by the sea and explain it in one sentence."},
